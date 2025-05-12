@@ -6,7 +6,9 @@ Se realizó un panel básico de administración para la gestión de empresas y s
 
 - Laravel 12
 - Jetstream + Livewire
-- MySQL  
+- MySQL
+- HTML,CSS,JS
+- Tailwind
 
 ## Instalación
 
@@ -20,14 +22,17 @@ Se realizó un panel básico de administración para la gestión de empresas y s
    cp .env.example .env
    
 4. Generar la key de la aplicación:   
-   php artisan key:generate
+   php artisan key:generate 
    
-5. Ejecutar las migraciones de la base de datos:   
+5. Instalar las dependencias de JavaScript:   
+   yarn install o npm install
+
+6. Ejecutar las migraciones de la base de datos:   
    php artisan migrate
    
-6. Instalar las dependencias de JavaScript:   
-   yarn install o npm install
+7. Ejecutar los seeders:   
+   php artisan db:seed
    
-7. Ejecutar el servidor de desarrollo:   
+8. Ejecutar el servidor de desarrollo:   
    php artisan serve o npm run dev o yarn dev
    
