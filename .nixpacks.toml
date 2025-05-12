@@ -1,0 +1,18 @@
+[phases]
+install = """
+composer install --no-dev --optimize-autoloader
+yarn install --frozen-lockfile
+"""
+
+build = """
+yarn build
+php artisan optimize
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+php artisan migrate --force
+"""
+
+[environment]
+NODE_ENV = "production"
+COMPOSER_HOME = "/app/.composer"
